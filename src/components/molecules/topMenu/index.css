@@ -1,0 +1,60 @@
+nav {
+    background-color: #287c78;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+ .nav-list{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    color: #F2F2F2;
+    font-size: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.blogspot {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.active-link {
+    border-bottom: white solid 3px;
+    padding-bottom: 1px;
+}
+
+.active-link:hover {
+    border-bottom:  #413b97 solid 3px;
+    padding-bottom: 1px;
+}
+
+.link:hover {
+    color: #413b97;
+}
+
+.login {
+    color: white;
+    text-decoration: none;
+    background-color: #413b97;
+    padding: 5px 10px 5px 10px;
+}
+
+.login:hover{
+    background-color: #5249ca;
+}

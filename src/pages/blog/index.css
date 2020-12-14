@@ -1,0 +1,33 @@
+.blog-page{
+    background-color: #fff4ec;
+    width: 100vw;
+    height: 100%;
+}
+
+.blog-list {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hello {
+    width: 100px;
+    height: 100px;
+}
+
+.see-all{
+    flex-basis: 210px;
+    height: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: #287c78;
+}
+
+.see-all-p {
+    font-size: 20px;
+    color: white;
+}

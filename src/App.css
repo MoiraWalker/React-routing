@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Andika New Basic', sans-serif;
+    box-sizing: border-box;
+}
+
+.app {
+    background-color: #fff4ec;
+    width: 100vw;
+    height: 100vh;
+}
+
+.page-container {
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+h1 {
+    color: #413b97;
+    margin-bottom: 40px;
+}
+
+h3 {
+    color: #413b97;
+    font-size: 26px;
+    line-height: 28px;
+}
+
+h4 {
+    color: #413b97;
+    font-size: 20px;
+    line-height: 28px;
+}

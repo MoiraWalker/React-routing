@@ -1,0 +1,33 @@
+.blog-content-card {
+    background-color: #dfddff;
+    flex-basis: 500px;
+    height: 500px;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.blog-content-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.blog-content-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-content {
+    margin-top: 10px;
+}
+
+.blog-content-title {
+    margin-bottom: 20px;
+}
+
+.close {
+    margin: 5px
+}
+
