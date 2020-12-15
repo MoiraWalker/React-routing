@@ -1,36 +1,56 @@
 import React from 'react';
 import posts from '../../data/posts.json';
-import { useAuthentication } from '../../hooks/authentication';
 import { BlogListItem } from "../../components/molecules/BlogListItem";
-import { BlogPost} from "../blogPost";
 import './index.css';
-
+import {AuthContext} from "../../hooks/authContext";
+import { useContext } from 'react';
+import {NavLink} from "react-router-dom";
 
 export const Blog = () => {
-    const { isAuthenticated } = useAuthentication();
+    const context = useContext(AuthContext);
+    const { toggle } = context;
+
     return (
         <div className="blog-page">
             <div className="page-container">
-                <h1>Blogposts - {posts.length}</h1>
+                <h1>Blogposts</h1>
                 <ul className="blog-list">
                     {posts.map((post) => (
                         <>
-                            {(!post.private || isAuthenticated) && <BlogListItem
-                            link={`/blog/${post.id}`}
-                            date={post.date.split(' ')[0]}
-                            title={post.title}
+
+                            {/*{ toggle ?*/}
+                            {/*    (!post.private) &&*/}
+                            {/*    <div>*/}
+                            {/*        <BlogListItem*/}
+                            {/*            link={`/blog/${post.id}`}*/}
+                            {/*            date={post.date.split(' ')[0]}*/}
+                            {/*            title={post.title}*/}
+                            {/*        />*/}
+                            {/*    </div>*/}
+                            {/*    :*/}
+                            {/*    (post.private) && <BlogListItem*/}
+                            {/*        link={`/blog/${post.id}`}*/}
+                            {/*        date={post.date.split(' ')[0]}*/}
+                            {/*        title={post.title}*/}
+                            {/*    />*/}
+                            {/*}*/}
+
+                            {(!post.private) && <BlogListItem
+                                link={`/blog${post.id}`}
+                                date={post.date.split(' ')[0]}
+                                title={post.title}
                             />}
 
-                            {/*{(!post.private || isAuthenticated) && <BlogListItem*/}
-                            {/*    link={`/blog/${post.id}`}*/}
-                            {/*    date={post.date.split(' ')[0]}*/}
-                            {/*    title={post.title}*/}
-                            {/*/>}*/}
+
                         </>
                     ))}
-                    <div className="see-all">
-                        <p className='see-all-p'>To see all blogposts please log in</p>
-                    </div>
+                    { toggle ?
+                        <div className="see-all">
+                            <p className='see-all-p'>To see all blogposts please
+                                </p>
+                            <NavLink to="/login" className="see-all-link" >Log in</NavLink>
+                        </div> : <></>
+                    }
                 </ul>
             </div>
         </div>

@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Andika New Basic', sans-serif;
+    font-family: roboto;
     box-sizing: border-box;
 }
 
 .app {
-    background-color: #fff4ec;
+    background-color: #e9f3ff;
     width: 100vw;
     height: 100vh;
 }
@@ -18,19 +19,62 @@
     margin: 60px auto;
 }
 
-h1 {
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
     color: #413b97;
+}
+
+h1 {
     margin-bottom: 40px;
 }
 
 h3 {
-    color: #413b97;
     font-size: 26px;
-    line-height: 28px;
+    line-height: 37px;
 }
 
 h4 {
-    color: #413b97;
     font-size: 20px;
     line-height: 28px;
+}
+
+p {
+    font-family: Roboto;
+    line-height: 28px;
+}
+
+.primary-link {
+    color: white;
+    text-decoration: none;
+    background-color: #413b97;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+}
+
+.primary-link:hover{
+    background-color: #5249ca;
+}
+
+.secundary-link {
+    color: white;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+}
+
+.secundary-link:hover{
+    background-color: #91b8ff;
+}
+
+.tertiary-link {
+    color: white;
+    text-decoration: none;
+    background-color: #a4afbc;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+}
+
+.tertiary-link:hover{
+    background-color: #bfc9d5;
 }

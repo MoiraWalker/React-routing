@@ -1,23 +1,22 @@
 import './App.css';
 import TopMenu from './components/molecules/topMenu';
 import { Routes }  from './routes';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AuthProvider, { AuthContext } from "./hooks/authContext";
 
 function App() {
     return (
         <div className="app">
-            <Router>
-                <nav>
-                    <TopMenu/>
-                </nav>
-                <main>
-                    <Routes />
-                </main>
-            </Router>
+                <Router>
+                    <AuthProvider>
+                        <nav>
+                            <TopMenu/>
+                        </nav>
+                        <main>
+                            <Routes />
+                        </main>
+                    </AuthProvider>
+                </Router>
         </div>
     );
 }

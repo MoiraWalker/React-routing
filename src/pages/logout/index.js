@@ -1,13 +1,13 @@
 import React from 'react';
-import { LoginForm } from '../../components/organisms/loginForm';
 import './index.css';
+import {LogoutForm} from "../../components/organisms/logoutForm";
 
 
 
-export const Login = () => (
+export const Logout = () => (
     <div className='page-container'>
         <div className='login-form-container'>
-            <LoginForm/>
+            <LogoutForm/>
         </div>
     </div>
 );

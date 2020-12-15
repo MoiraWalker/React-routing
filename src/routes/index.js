@@ -1,9 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {
-    Home,
+    About,
     Blog,
     Login,
+    Logout,
     BlogPost,
 } from '../pages';
 import { ProtectedRoute } from "../components/atoms/protectedRoute";
@@ -14,11 +15,12 @@ export const Routes = () => {
 
     return (
         <Switch>
-            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/" component={Blog}></Route>
             {/*<ProtectedRoute path="/blog/:id" component={BlogPost} isAuth={isAuth} />*/}
-            <Route path="/blog/:id" component={BlogPost}/>
-            <Route path="/blog" component={Blog}></Route>
+            <Route path="/blog:id" component={BlogPost}/>
+            <Route path="/about" component={About}></Route>
             <Route path="/login" component={Login}></Route>
+            <Route path="/logout" component={Logout}></Route>
         </Switch>
     );
 }

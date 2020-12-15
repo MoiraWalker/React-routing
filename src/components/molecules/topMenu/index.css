@@ -10,7 +10,8 @@ nav {
     justify-content: space-between;
     width: 1000px;
 }
- .nav-list{
+
+.nav-list{
     display: flex;
     width: 250px;
     justify-content: space-between;
@@ -22,16 +23,18 @@ li {
     font-size: 20px;
 }
 
-.link {
-    text-decoration: none;
-    color: white;
-}
-
 .blogspot {
     text-decoration: none;
     color: white;
     font-size: 24px;
     font-weight: bold;
+    font-family: 'Andika New Basic', sans-serif;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-family: 'Andika New Basic', sans-serif;
 }
 
 .active-link {
@@ -46,15 +49,4 @@ li {
 
 .link:hover {
     color: #413b97;
-}
-
-.login {
-    color: white;
-    text-decoration: none;
-    background-color: #413b97;
-    padding: 5px 10px 5px 10px;
-}
-
-.login:hover{
-    background-color: #5249ca;
 }

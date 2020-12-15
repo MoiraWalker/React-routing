@@ -2,19 +2,14 @@ import React from 'react';
 import './index.css';
 import { useForm, FormProvider } from "react-hook-form";
 import { InputField } from "../../molecules/inputField";
-import { useState } from 'react';
-import { Button } from '../../atoms/button';
-import {useAuthentication} from "../../../hooks/authentication";
-import { Redirect, useLocation } from "react-router-dom";
+import { AuthContext } from "../../../hooks/authContext";
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 export const LoginForm = ({}) => {
-    // const { login, isAuthenticated } = useAuthentication();
-    const location = useLocation();
-
-    // const onSuccess = ({username, password}) => {
-    //     login(username, password);
-    // };
-
+    const context = useContext(AuthContext);
+    const { toggle, setToggle } = context;
 
     function onSucces() {
         console.log("succes")
@@ -33,7 +28,7 @@ export const LoginForm = ({}) => {
             <FormProvider {...methods} register={register} watch={watch} handleSubmit={handleSubmit}>
              <form onSubmit={handleSubmit(onSucces, onError)}>
                  <div className="form-header">
-                     <label className="welcome">Welcome</label>
+                     <h1 >Welcome</h1>
                  </div>
                  <div className='form-item'>
                      <InputField
@@ -41,6 +36,7 @@ export const LoginForm = ({}) => {
                          name="userName"
                          label="Username"
                          id="user-name"
+                         value="Jhon-doe@gmail.com"
                          fieldRef={register({
                              required: {
                                  value: true,
@@ -54,6 +50,7 @@ export const LoginForm = ({}) => {
                          name="password"
                          label="Password"
                          type="password"
+                         value="password123"
                          fieldRef={register({
                              required: {
                                  value: true,
@@ -63,7 +60,7 @@ export const LoginForm = ({}) => {
                      >
                      </InputField>
                  </div>
-                 <Button>Log in</Button>
+                 <NavLink to="/" onClick={() => setToggle(!toggle)} className="login-button" >Log in</NavLink>
              </form>
         </FormProvider>
      </>
