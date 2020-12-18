@@ -1,12 +1,12 @@
+.blog-page {
+    background-color: #e9f3ff;
+    height: 100%;
+}
+
 .blog-list {
     display:flex;
     flex-wrap: wrap;
     width: 100%;
-}
-
-.hello {
-    width: 100px;
-    height: 100px;
 }
 
 .see-all{

@@ -18,30 +18,20 @@ export const Blog = () => {
                     {posts.map((post) => (
                         <>
 
-                            {/*{ toggle ?*/}
-                            {/*    (!post.private) &&*/}
-                            {/*    <div>*/}
-                            {/*        <BlogListItem*/}
-                            {/*            link={`/blog/${post.id}`}*/}
-                            {/*            date={post.date.split(' ')[0]}*/}
-                            {/*            title={post.title}*/}
-                            {/*        />*/}
-                            {/*    </div>*/}
-                            {/*    :*/}
-                            {/*    (post.private) && <BlogListItem*/}
-                            {/*        link={`/blog/${post.id}`}*/}
-                            {/*        date={post.date.split(' ')[0]}*/}
-                            {/*        title={post.title}*/}
-                            {/*    />*/}
-                            {/*}*/}
-
-                            {(!post.private) && <BlogListItem
-                                link={`/blog${post.id}`}
-                                date={post.date.split(' ')[0]}
-                                title={post.title}
-                            />}
-
-
+                            { toggle ?
+                                (!post.private) &&
+                                    <BlogListItem
+                                        link={`/blog/${post.id}`}
+                                        date={post.date.split(' ')[0]}
+                                        title={post.title}
+                                    />
+                                :
+                                (post.private) && <BlogListItem
+                                    link={`/blog/${post.id}`}
+                                    date={post.date.split(' ')[0]}
+                                    title={post.title}
+                                />
+                            }
                         </>
                     ))}
                     { toggle ?
