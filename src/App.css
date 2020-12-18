@@ -78,3 +78,7 @@ p {
 .tertiary-link:hover{
     background-color: #bfc9d5;
 }
+
+.test{
+    color: black;
+}
