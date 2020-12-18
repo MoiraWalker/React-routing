@@ -2,7 +2,7 @@ import React from 'react';
 import posts from '../../data/posts.json';
 import { BlogListItem } from "../../components/molecules/BlogListItem";
 import './index.css';
-import {AuthContext} from "../../hooks/authContext";
+import {AuthContext} from "../../context/authContext";
 import { useContext } from 'react';
 import {NavLink} from "react-router-dom";
 

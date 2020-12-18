@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import { useForm, FormProvider } from "react-hook-form";
 import { InputField } from "../../molecules/inputField";
-import { AuthContext } from "../../../hooks/authContext";
+import { AuthContext } from "../../../context/authContext";
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 

@@ -2,7 +2,7 @@ import './App.css';
 import TopMenu from './components/molecules/topMenu';
 import { Routes }  from './routes';
 import { BrowserRouter as Router } from 'react-router-dom';
-import AuthProvider, { AuthContext } from "./hooks/authContext";
+import AuthProvider, { AuthContext } from "./context/authContext";
 
 function App() {
     return (
